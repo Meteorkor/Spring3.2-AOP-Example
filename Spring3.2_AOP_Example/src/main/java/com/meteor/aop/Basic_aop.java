@@ -45,4 +45,17 @@ public class Basic_aop {
 		
 	}
 	
+	@Around( value="@annotation(com.meteor.annotation.MyAnnotation)")
+	public Object around1111(ProceedingJoinPoint joinpoint) throws Throwable{
+		
+		Object result = null;
+		System.out.println("annotation");
+		result = joinpoint.proceed();
+	
+		System.out.println("after ");
+		
+		return result;
+		
+	}
+	
 }
