@@ -16,6 +16,7 @@ import com.meteor.annotation.MyAnnotation;
 /**
  * Handles requests for the application home page.
  */
+
 @Controller
 public class HomeController {
 	
@@ -37,6 +38,7 @@ public class HomeController {
 		
 		return "home";
 	}
+
 	@MyAnnotation
 	@RequestMapping(value = "/my", method = RequestMethod.GET)
 	public String my_req(Locale locale, Model model) {
@@ -52,4 +54,5 @@ public class HomeController {
 		
 		return "home";
 	}
+	
 }
