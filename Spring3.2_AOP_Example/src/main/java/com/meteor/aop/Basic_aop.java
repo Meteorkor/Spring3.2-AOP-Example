@@ -19,12 +19,11 @@ public class Basic_aop {
 	}
 
 	@Around( value="point_cut_area()")
-	//@Around(value="point_cut_area()")
 	public Object around(ProceedingJoinPoint joinpoint) throws Throwable{
 		
 		Object result = null;
 		
-		System.out.println("before È¿°ú");
+		System.out.println("before ì‹¤í–‰");
 
 		HttpServletRequest request = null;
         HttpServletResponse response = null;
@@ -40,7 +39,7 @@ public class Basic_aop {
         }
 		result = joinpoint.proceed();
 	
-		System.out.println("after È¿°ú");
+		System.out.println("after ì‹¤í–‰");
 		
 		return result;
 		
